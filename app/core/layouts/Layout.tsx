@@ -11,7 +11,7 @@ const Layout = ({ title, children }: LayoutProps) => {
     <>
       <Head>
         <title>{title || "todoBlitzApp"}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/my-bookshelf-icon.png" />
       </Head>
 
       {children}
