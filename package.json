@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@prisma/client": "~2.20",
+    "antd": "4.16.13",
     "blitz": "0.34.3",
     "formik": "2.2.6",
     "prisma": "~2.20",
