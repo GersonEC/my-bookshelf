@@ -2,7 +2,7 @@ import { Suspense } from "react"
 import { BlitzPage } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import Header from "app/core/components/Header/Header"
-import Categories from "app/core/components/Categories/Categories"
+import Categories from "app/core/components/Category/Categories"
 
 const Home: BlitzPage = () => {
   return (
