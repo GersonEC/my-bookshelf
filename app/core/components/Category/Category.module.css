@@ -1,4 +1,4 @@
-.category {
+.category_body {
   display: flex;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1rem;
@@ -10,12 +10,21 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
-.category:hover {
+.category_body:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   transform: scale(1.03);
   transition: 0.3s;
 }
 
-.name:hover {
+.category_action {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.category_action:hover {
+  cursor: pointer;
+  color: red;
+  transition: 0.3s;
 }
