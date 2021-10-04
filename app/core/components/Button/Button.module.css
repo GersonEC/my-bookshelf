@@ -1,9 +1,12 @@
 .button {
   border-radius: 1rem;
   padding: 0.25rem 1rem;
-  margin: 0;
+  background-color: rgb(240, 225, 179);
+  font-weight: 600;
 }
 
 .button:hover {
   cursor: pointer;
+  transform: scale(1.03);
+  transition: 0.3s;
 }

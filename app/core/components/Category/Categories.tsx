@@ -28,6 +28,7 @@ export default function Categories() {
       openNotification(NotificationType.SUCCESS, message, "topRight", description)
       setConfirmLoading(false)
       setVisible(false)
+      setCategoryName("")
     } catch (error) {
       const message = "Ops! Errore in eliminazione"
       const description = error.message
@@ -63,8 +64,8 @@ export default function Categories() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.category_header}>
-        <h2>Categorie</h2>
+      <div className={styles.header}>
+        <h1>Categorie</h1>
         <Button label={"Aggiungi"} onClick={showModal} />
       </div>
       {openModal()}

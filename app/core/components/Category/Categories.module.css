@@ -2,20 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px;
 }
 
 .category_header {
   display: flex;
-  inline-size: 80%;
+  inline-size: 100%;
   justify-content: space-between;
 }
 
 .gridWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 80vh;
+  min-height: 100vh;
   gap: 2rem;
   padding: 0.5rem 3rem 3rem 3rem;
   justify-content: center;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
 }

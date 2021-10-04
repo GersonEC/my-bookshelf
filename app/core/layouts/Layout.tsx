@@ -14,7 +14,7 @@ const Layout = ({ title, children }: LayoutProps) => {
         <link rel="icon" href="/my-bookshelf-icon.png" />
       </Head>
 
-      {children}
+      <div style={{ padding: "0px 32px 64px 32px" }}>{children}</div>
     </>
   )
 }

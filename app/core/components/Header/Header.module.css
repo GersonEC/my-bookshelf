@@ -5,6 +5,8 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  margin-left: -32px;
+  margin-right: -32px;
   position: sticky;
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.25) 0 1.95px 1.6px;
@@ -12,4 +14,9 @@
 
 .logo {
   height: 50px;
+  padding: 4px;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
