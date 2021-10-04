@@ -5,8 +5,6 @@ import { useMutation } from "@blitzjs/core"
 import deleteCategory from "./mutations/deleteCategory"
 import { openNotification } from "app/core/utilities/utils"
 import { NotificationType } from "app/core/utilities/utils"
-import { Button, notification, Divider, Space } from "antd"
-import { RadiusUprightOutlined } from "@ant-design/icons"
 import "antd/dist/antd.css"
 
 interface CategoryProps {
@@ -16,16 +14,19 @@ interface CategoryProps {
 export default function Category({ category }: CategoryProps) {
   const [deleteMutation] = useMutation(deleteCategory)
 
-  const onCategoryDelete = async (id: number) => {
+  const onCategoryDelete = async (_category: CategoryModel) => {
     try {
-      //const category = await deleteMutation(id)
-      console.log(`Categoria eliminata ${category}`)
-      const message = "Messaggio"
-      const description = "asfkasf kjdf skldfj slkdf j"
-      openNotification(NotificationType.SUCCESS, message, "topRight", description)
+      // eslint-disable-next-line no-restricted-globals
+      if (confirm(`Sei sicuro di voler eliminare la categoria: ${_category.name}?`)) {
+        await deleteMutation(_category.id)
+        console.log()
+        const message = "Categoria eliminata!"
+        const description = `La categoria ${_category.name} è stata eliminata con successo.`
+        openNotification(NotificationType.SUCCESS, message, "topRight", description)
+      }
     } catch (error) {
-      const message = error.message
-      const description = "asd asd"
+      const message = "Ops! Errore in eliminazione"
+      const description = error.message
       openNotification(NotificationType.ERROR, message, "topRight", description)
     }
   }
@@ -33,7 +34,7 @@ export default function Category({ category }: CategoryProps) {
   return (
     <div>
       <div className={styles.category_action}>
-        <AiFillDelete title="Eliminare Categoria" onClick={() => onCategoryDelete(category.id)} />
+        <AiFillDelete title="Eliminare Categoria" onClick={() => onCategoryDelete(category)} />
       </div>
       <div className={styles.category_body}>
         <h3 className={styles.name}>{category.name}</h3>

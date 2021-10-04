@@ -1,0 +1,9 @@
+.button {
+  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  margin: 0;
+}
+
+.button:hover {
+  cursor: pointer;
+}

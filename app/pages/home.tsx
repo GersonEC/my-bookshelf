@@ -3,11 +3,10 @@ import { BlitzPage } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import Header from "app/core/components/Header/Header"
 import Categories from "app/core/components/Category/Categories"
-import stlyes from "./pages-style/Home.module.css"
 
 const Home: BlitzPage = () => {
   return (
-    <div className={stlyes.home}>
+    <div>
       <Suspense fallback="Loading...">
         <Header />
         <Categories />
