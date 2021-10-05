@@ -22,10 +22,16 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0.5rem;
+  gap: 8px;
 }
 
 .category_action:hover {
   cursor: pointer;
+}
+
+.category_action .delete:hover {
   color: red;
-  transition: 0.3s;
+}
+.category_action .edit:hover {
+  color: orange;
 }

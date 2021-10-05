@@ -1,5 +1,5 @@
 import styles from "./Category.module.css"
-import { AiFillDelete } from "react-icons/ai"
+import { AiFillDelete, AiFillEdit } from "react-icons/ai"
 import { Category as CategoryModel } from "db"
 import { useMutation } from "@blitzjs/core"
 import deleteCategory from "./mutations/deleteCategory"
@@ -34,7 +34,16 @@ export default function Category({ category }: CategoryProps) {
   return (
     <div>
       <div className={styles.category_action}>
-        <AiFillDelete title="Eliminare Categoria" onClick={() => onCategoryDelete(category)} />
+        <AiFillEdit
+          className={styles.edit}
+          title="Modificare Categoria"
+          onClick={() => onCategoryDelete(category)}
+        />
+        <AiFillDelete
+          className={styles.delete}
+          title="Eliminare Categoria"
+          onClick={() => onCategoryDelete(category)}
+        />
       </div>
       <div className={styles.category_body}>
         <h3 className={styles.name}>{category.name}</h3>
