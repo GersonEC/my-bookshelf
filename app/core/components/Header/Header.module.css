@@ -10,6 +10,7 @@
   position: sticky;
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.25) 0 1.95px 1.6px;
+  z-index: 7;
 }
 
 .logo {
